@@ -1,0 +1,11 @@
+<h1>Users</h1>
+<button *ngIf="!isCollapsed" (click)="toggleClick()">Collapse</button>
+<button *ngIf="isCollapsed" (click)="toggleClick()">Expand</button>
+<div *ngIf="!isCollapsed">
+  <h3>{{user.name}}</h3>
+  <h4>{{user.designation}}</h4>
+  <h3>{{user.address}}</h3>
+  <p *ngFor="let contact of user.phone">{{contact}}</p>
+</div>
+<br /><br />
+<input text="text" [(ngModel)]="inputText" /><br /> {{inputText}}
